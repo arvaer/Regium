@@ -4,7 +4,6 @@ import {
   Container,
   Heading,
   Box,
-  SimpleGrid,
   Button,
   List,
   ListItem,
@@ -16,10 +15,7 @@ import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
-import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import { IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -37,15 +33,15 @@ const Home = () => (
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        Hello, I&apos;m a software engineer based in Miami!
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Michael Almeida
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Digital Nomad ( Mathematician / Developer / Musician )</p>
         </Box>
         <Box
           flexShrink={0}
@@ -64,9 +60,9 @@ const Home = () => (
             overflow="hidden"
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src="/images/Mikey.png"
               alt="Profile image"
-              borderRadius="full"
+              borderRadius="half"
               width="100%"
               height="100%"
             />
@@ -79,14 +75,15 @@ const Home = () => (
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop" scroll={false}>
-            <Link>Inkdrop</Link>
+          Im a full-stack developer based in North Cqrolina, with a passion for
+          solving problems with code. From a young age, Ive spent most of my
+          time using a computer... probably on World of Warcraft. In college I
+          ended up studying Math and Physics-- but through my mentors I
+          discovered the bridge between what I studied and computer science,
+          which is what I am working in now. When not on my computer, I can be
+          found either playing guitar, hiking, or traveling as documented by my
+          <NextLink href="/photos" scroll={false}>
+            <Link> Photos</Link>
           </NextLink>
           .
         </Paragraph>
@@ -104,22 +101,46 @@ const Home = () => (
           Bio
         </Heading>
         <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
+          <BioYear>1997</BioYear>
+          Hello World!
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
+          <BioYear>2016</BioYear>
+          Was a research assitant at University of Miami Miller School of
+          Medicine
         </BioSection>
         <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
+          <BioYear>2017</BioYear>
+          Was a research assistant University of Miami under Dr. Mohammed
+          Hashemi in the Laboratory of Quantum Optics
         </BioSection>
         <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
+          <BioYear>2017</BioYear>
+          Started working part time as a web developer for Medquest Media in
+          Brickell, Florida
+        </BioSection>
+        <BioSection>
+          <BioYear>2019-2020</BioYear>
+          Was a research assistant at the University of Miami under Dr. Mason
+          Klien in the Biophysics Laboratory
+        </BioSection>
+        <BioSection>
+          <BioYear>2020</BioYear>
+          Awarded a Bachelor of Science in Applied Mathematics and Pure physics
+          at Univerty of Miami
+        </BioSection>
+        <BioSection>
+          <BioYear>2020-2021</BioYear>
+          Started work as a junior engineer at Radiance Commerce (formerly
+          Radiance Laboratories)
+        </BioSection>
+        <BioSection>
+          <BioYear>2021-Today!</BioYear>
+          Started work as a full stack developer at Cymantix
+        </BioSection>
+        <BioSection>
+          <BioYear>2021</BioYear>
+          Started work as a free lance developer on Upwork.com
         </BioSection>
       </Section>
 
@@ -128,15 +149,11 @@ const Home = () => (
           I ♥
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
-          <Link href="https://illust.odoruinu.net/" target="_blank">
-            Drawing
+           Music,{' '}
+          <Link href="https://soundcloud.com/arven-the-violinist" target="_blank">
+            Drawing, 
           </Link>
-          , Playing Drums,{' '}
-          <Link href="https://500px.com/p/craftzdog" target="_blank">
-            Photography
-          </Link>
-          , Leica, Machine Learning
+            and Photography
         </Paragraph>
       </Section>
 
@@ -146,67 +163,29 @@ const Home = () => (
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://github.com/arvaer" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoGithub />}
               >
-                @craftzdog
+                @arvaer
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
+            <Link href="https://instagram.com/mjalmeidah" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoInstagram />}
               >
-                @craftzdog
+                @mjalmeidah
               </Button>
             </Link>
           </ListItem>
         </List>
 
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
-            thumbnail={thumbYouTube}
-          >
-            My YouTube channel
-          </GridItem>
-          <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
-          >
-            A Markdown note-taking app
-          </GridItem>
-        </SimpleGrid>
 
         <Box align="center" my={4}>
           <NextLink href="/posts" scroll={false}>
